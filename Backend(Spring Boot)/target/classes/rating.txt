@@ -1,0 +1,162 @@
+package com.example.loginuser.entity;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@Entity
+@Table(name = "rating")
+@JsonIgnoreProperties(ignoreUnknown = true)
+
+public class Rating {
+	@Id
+	@GeneratedValue(strategy =GenerationType.IDENTITY)
+	private int rating_id;
+	private int user_id;
+	private int movie_id;
+	private float rating;
+	private String review;
+	
+	@ManyToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+    @JoinTable(
+            name="rating",
+            joinColumns={@JoinColumn(name="USER_ID", referencedColumnName="user_id")},
+            inverseJoinColumns={@JoinColumn(name="MOVIE_ID", referencedColumnName="movie_id")})
+	private List<Movie> movies = new ArrayList<>();
+	
+	public Rating() {
+		super();
+	}
+
+	public Rating(int rating_id, int user_id, int movie_id, float rating, String review) {
+		super();
+		this.rating_id = rating_id;
+		this.user_id = user_id;
+		this.movie_id = movie_id;
+		this.rating = rating;
+		this.review = review;
+	}
+
+	public int getRating_id() {
+		return rating_id;
+	}
+
+	public void setRating_id(int rating_id) {
+		this.rating_id = rating_id;
+	}
+
+	public int getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
+
+	public int getMovie_id() {
+		return movie_id;
+	}
+
+	public void setMovie_id(int movie_id) {
+		this.movie_id = movie_id;
+	}
+
+	public float getRating() {
+		return rating;
+	}
+
+	public void setRating(float rating) {
+		this.rating = rating;
+	}
+
+	public String getReview() {
+		return review;
+	}
+
+	public void setReview(String review) {
+		this.review = review;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+User user = null;
+		int user_id = ratingDto.getUser_id();
+		int movie_id = ratingDto.getMovie_id();
+		try {
+			user = userRepository.findById(user_id);
+			}
+			catch(Exception Ex) {
+			}
+		if(user==null) {
+			System.out.println("User Not Found");
+			return false;
+		}
+			Optional<Movie> movie = null;
+			try {
+				movie = movieRepository.findById(movie_id);
+				}
+				catch(Exception M) {
+				}
+			if(movie==null) {
+				System.out.println("Movie Title Not Found");
+				return false;
+			}
+		if(user != null && movie != null) {
+			
+			Rating rating = new Rating();
+			rating.setMovie_id(user_id);
+			rating.setUser_id(movie_id);
+			rating.setRating(ratingDto.getRating());
+			rating = ratingRepository.saveAndFlush(rating);
+
+//			double sum = 0.0;
+//		for (Rating s : movie.getPastRating()) {
+//			sum = sum + s.getRating();
+//		}
+//
+//		
+//		double avg = sum / movie.getRating().SIZE;
+//
+//		movie.setRating(avg);
+//	
+//		movie.setCount(	movie.getRating().SIZE);
+//
+//		movie = movieRepository.save(movie);
+		}
