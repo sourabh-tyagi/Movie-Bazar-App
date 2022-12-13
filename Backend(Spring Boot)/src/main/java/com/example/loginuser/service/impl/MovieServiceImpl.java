@@ -23,44 +23,33 @@ public class MovieServiceImpl implements MovieService{
 	}
 
 
-	public boolean addMovie(MovieDto movieDto) {
-		// TODO Auto-generated method stub
-
-		Movie movie = null;
-		try {
-		movie = movieRepository.findByTitle(movieDto.getTitle());
-		}
-		catch(Exception M) {
-		}
-		if(movie!=null) {
-			System.out.println("Movie already Exists");
-			return false;
-		}
-		Movie Nmov = new Movie();
-		Nmov.setTitle(movieDto.getTitle());
-		Nmov.setOverAllRating(movieDto.getOverAllRating());
-		Nmov.setAvailable(movieDto.getAvailable());
-		Nmov.setYearOfRelease(movieDto.getYearOfRelease());
-		Movie savedMovie = movieRepository.save(Nmov);
-		if(savedMovie!=null) {
-			System.out.println("New Movie Created");
-			return true;
-		}
-		else {
-			System.out.println( "Movie Creation Failed");
-			return false;
-		}
-	}
-
-
-	@Override
-	public MovieDto findByMovieId(Integer movie_id) {
-		// TODO Auto-generated method stub
-		Movie result = movieRepository.findById(movie_id).get();
-		MovieDto dto = new MovieDto(result);
-		return dto;
-
-	}	
-	
+//	public boolean addMovie(MovieDto movieDto) {
+//		// TODO Auto-generated method stub
+//
+//		Movie movie = null;
+//		try {
+//		movie = movieRepository.findByTitle(movieDto.getTitle());
+//		}
+//		catch(Exception M) {
+//		}
+//		if(movie!=null) {
+//			System.out.println("Movie already Exists");
+//			return false;
+//		}
+//		Movie Nmov = new Movie();
+//		Nmov.setTitle(movieDto.getTitle());
+//		Nmov.setOverAllRating(movieDto.getOverAllRating());
+//		Nmov.setAvailable(movieDto.getAvailable());
+//		Nmov.setYearOfRelease(movieDto.getYearOfRelease());
+//		Movie savedMovie = movieRepository.save(Nmov);
+//		if(savedMovie!=null) {
+//			System.out.println("New Movie Created");
+//			return true;
+//		}
+//		else {
+//			System.out.println( "Movie Creation Failed");
+//			return false;
+//		}
+//	}
 	
 }

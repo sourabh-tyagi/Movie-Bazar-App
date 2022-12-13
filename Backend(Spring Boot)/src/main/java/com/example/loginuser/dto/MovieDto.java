@@ -1,5 +1,7 @@
 package com.example.loginuser.dto;
 
+import java.math.BigDecimal;
+
 import com.example.loginuser.entity.Movie;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -10,10 +12,10 @@ public class MovieDto {
 	private int movie_id;
 	private String title;
 	private int yearOfRelease;
-	private double overAllRating;
+	private BigDecimal overAllRating;
 	private String available;
 	
-	public MovieDto(int movie_id, String title, int yearOfRelease, double overAllRating, String available) {
+	public MovieDto(int movie_id, String title, int yearOfRelease, BigDecimal overAllRating, String available) {
 		super();
 		this.movie_id = movie_id;
 		this.title = title;
@@ -50,10 +52,10 @@ public class MovieDto {
 	public void setYearOfRelease(int yearOfRelease) {
 		this.yearOfRelease = yearOfRelease;
 	}
-	public double getOverAllRating() {
+	public BigDecimal getOverAllRating() {
 		return overAllRating;
 	}
-	public void setOverAllRating(double overAllRating) {
+	public void setOverAllRating(BigDecimal overAllRating) {
 		this.overAllRating = overAllRating;
 	}
 	public String getAvailable() {

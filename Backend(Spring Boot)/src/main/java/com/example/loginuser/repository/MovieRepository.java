@@ -1,5 +1,7 @@
 package com.example.loginuser.repository;
 
+import java.math.BigDecimal;
+
 import javax.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -15,6 +17,6 @@ public interface MovieRepository extends JpaRepository<Movie ,Integer>{
 	@Modifying
     @Transactional
     @Query(nativeQuery = true, value="update movie set over_all_rating=?2, count=?3 where movie_id=?1")
-		void setRating(int movieId, double value, int count);
+		void setRating(int movieId, BigDecimal value, int count);
 	
 }

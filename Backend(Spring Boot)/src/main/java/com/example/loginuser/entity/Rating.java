@@ -14,18 +14,18 @@ public class Rating {
 	@Column(nullable=false)
 	private int movie_id;
 	@Column(nullable=false)
-	private double rating;
+	private double ratings;
 	private String review;
 	
 	public Rating() {
 		super();
 	}
-	public Rating(int rating_id, int user_id, int movie_id, double rating, String review) {
+	public Rating(int rating_id, int user_id, int movie_id, double ratings, String review) {
 		super();
 		this.rating_id = rating_id;
 		this.user_id = user_id;
 		this.movie_id = movie_id;
-		this.rating = rating;
+		this.ratings = ratings;
 		this.review = review;
 	}
 
@@ -53,12 +53,12 @@ public class Rating {
 		this.movie_id = movie_id;
 	}
 
-	public double getRating() {
-		return rating;
+	public double getRatings() {
+		return ratings;
 	}
 
-	public void setRating(double rating) {
-		this.rating = rating;
+	public void setRatings(double ratings) {
+		this.ratings = ratings;
 	}
 
 	public String getReview() {

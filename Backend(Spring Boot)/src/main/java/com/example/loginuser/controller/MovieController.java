@@ -5,9 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-//import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+//import org.springframework.web.bind.annotation.PostMapping;
+//import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.loginuser.dto.MovieDto;
@@ -24,20 +23,15 @@ public class MovieController {
 		return movieService.findAll(pageable);
 	}
 	
-//	@GetMapping("/{id}")
-//	public MovieDto findByUserId(@PathVariable Integer movie_id){
-//		return movieService.findByMovieId(movie_id);
+//	@PostMapping("/addmovie")
+//	public String  NewMovie(@RequestBody MovieDto movieDto) throws Exception{
+//		boolean b=movieService.addMovie(movieDto);
+//		if(b)
+//			return "Movie Added Successfully";
+//		else
+//			return "Movie Failed To Add";
 //	}
-	
-	@PostMapping("/addmovie")
-	public String  NewMovie(@RequestBody MovieDto movieDto) throws Exception{
-		boolean b=movieService.addMovie(movieDto);
-		if(b)
-			return "Movie Added Successfully";
-		else
-			return "Movie Failed To Add";
-	}
-	
+//	
 	
 	
 

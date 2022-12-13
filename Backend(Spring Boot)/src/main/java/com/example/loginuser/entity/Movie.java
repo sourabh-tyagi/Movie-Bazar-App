@@ -1,4 +1,6 @@
 package com.example.loginuser.entity;
+import java.math.BigDecimal;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +19,8 @@ public class Movie {
 	private int movie_id;
 	@Column(nullable=false)
 	private String title;
-	private double overAllRating;
+	@Column(precision = 2, scale = 1)
+	private BigDecimal overAllRating;
 	private String available;
 	private int yearOfRelease;
 	private int count;
@@ -30,7 +33,7 @@ public class Movie {
 		super();
 	}
 
-	public Movie(int movie_id, String title, double overAllRating, String available, int yearOfRelease, int count) {
+	public Movie(int movie_id, String title, BigDecimal overAllRating, String available, int yearOfRelease, int count) {
 		super();
 		this.movie_id = movie_id;
 		this.title = title;
@@ -56,11 +59,11 @@ public class Movie {
 		this.title = title;
 	}
 
-	public double getOverAllRating() {
+	public BigDecimal getOverAllRating() {
 		return overAllRating;
 	}
 
-	public void setOverAllRating(double overAllRating) {
+	public void setOverAllRating(BigDecimal overAllRating) {
 		this.overAllRating = overAllRating;
 	}
 

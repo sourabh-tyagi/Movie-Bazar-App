@@ -2,7 +2,6 @@
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,7 +31,7 @@ public class UserController {
 	
 	@PostMapping("/register")
 	@CrossOrigin(origins = "http://localhost:3000")
-	public String  RegisterUser(@RequestBody UserDto userDto) throws Exception{
+	public String  registerUser(@RequestBody UserDto userDto) throws Exception{
 		if(userService.NewUserRegister(userDto))
 			return "User Created Successful";
 		else
@@ -40,10 +39,11 @@ public class UserController {
 	}
 	
 	@PutMapping("/forgot")
-	public String ChangePassword(@RequestBody UserDto userDto) throws Exception{
+	public String changePassword(@RequestBody UserDto userDto) throws Exception{
 		if(userService.PasswordChange(userDto))
 			return "Password Changed Sucessfully";
 		else
 			return "Password Change Failed";
 	}
+	
 }
