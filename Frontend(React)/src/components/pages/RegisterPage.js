@@ -67,10 +67,11 @@ export default function SignUpPage() {
                 <p>
                     <button id="sub_btn" onClick={() => shoot("Goal!")} type="submit">Register</button>
                 </p>
+                <p><Link to="/"><button type="button" class="btn btn-info">Back to Sign in</button></Link>.</p>
             </form>
-            <footer>
-                <p><Link to="/">Back to Homepage</Link>.</p>
-            </footer>
+            {/* <footer>
+                
+            </footer> */}
         </div>
     )
 

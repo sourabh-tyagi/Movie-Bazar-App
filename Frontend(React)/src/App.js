@@ -5,10 +5,12 @@ import RegisterPage from './components/pages/RegisterPage'
 import ResetPasswordPage from './components/pages/ResetPasswordPage'
 import HomePage from './components/pages/HomePage'
 import ReviewPage from './components/ReviewPage'
+
 import './App.css'
 
 
 export default function App() {
+
 
     return (
         <Router >

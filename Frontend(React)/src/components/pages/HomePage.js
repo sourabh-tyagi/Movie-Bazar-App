@@ -5,26 +5,19 @@ import { Link } from 'react-router-dom'
 
 
 export default function HomePage() {
-  
   let queryString = new URLSearchParams(window.location.search);
   var email = 'abc';
-  
   email=queryString.get('email');
-  console.log(email);
+
   const [moviedata,setMovieData]=useState()
     
     const datafetch=(async()=>{
        
-
-      
         const data=await fetch("/moviereview/movies")
   
   const res= await data.json()
   setMovieData(res.content)
 
-   
-
-  
     })
     datafetch()
     return (
@@ -32,7 +25,6 @@ export default function HomePage() {
         <div className="text-center">
             <h1 className="main-title home-page-title">welcome {email}</h1>
             <h3>Here are the list of movies you can review</h3>
-            
 
 
             <table class="table">

@@ -3,7 +3,6 @@
 
 h1[alt="Simple"] {color:black;}
 
-
 .starrating > input {display: none;}  /* Remove radio buttons */
 
 .starrating > label:before { 

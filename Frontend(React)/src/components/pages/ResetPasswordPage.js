@@ -55,9 +55,9 @@ export default function ResetPasswordPage() {
                 <p>
                     <button id="sub_btn" onClick={() => shoot("Goal!")}>Update Password</button>
                 </p>
+                <p><Link to="/"><button type="button" class="btn btn-info">Back to Sign in</button></Link>.</p>
             </form>
             <footer>
-                <p><Link to="/">Back to Homepage</Link>.</p>
             </footer>
         </div>
     )
