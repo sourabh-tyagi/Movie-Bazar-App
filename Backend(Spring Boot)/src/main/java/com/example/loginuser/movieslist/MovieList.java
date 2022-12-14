@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class MovieList {
-   static final String DB_URL = "jdbc:mysql://localhost/movie-review";
-   static final String USER = "root";
-   static final String PASS = "Mysqlwork@6";
+   static final String DB_URL = "jdbc:mysql://localhost/movie";
+   static final String USER = "movie-user";
+   static final String PASS = "dummypassword";
 
    public static void main(String[] args) {
 	      // Open a connection
