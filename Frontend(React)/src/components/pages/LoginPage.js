@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 import { SignInIcon } from '@primer/octicons-react'
+import BackgroundImage from '../../assets/images/c.jpg'
 import '../../App.css'
 
 export default function SignInPage() {
@@ -40,6 +41,7 @@ export default function SignInPage() {
         
          
     return (
+        <header style={ HeaderStyle }>
         <div className='bg'>
         <div className="text-center m-5-auto">
             <h2>Sign in to us for exclusive movie reviews</h2>
@@ -63,7 +65,16 @@ export default function SignInPage() {
             </footer>
         </div>
         </div>
+       </header>
         
         
     )
+}
+const HeaderStyle = {
+    width: "100%",
+    height: "100vh",
+    background: `url(${BackgroundImage})`,
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
 }
