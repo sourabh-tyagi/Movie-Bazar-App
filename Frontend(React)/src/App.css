@@ -36,6 +36,11 @@ body {
 .main-para {
     color: #f1f1f1
 }
+.main-line{
+
+    color:crimson;
+    font-size: 1.5rem;
+}
 
 .main-title {
     padding-top: 5rem;
@@ -74,6 +79,13 @@ form {
     border-radius: 2px;
     padding: 2rem;
     margin: 2rem 0 1rem 0
+}
+.hi{
+    background-color:paleturquoise;
+    border-collapse: collapse;
+    width: 90%;
+    align-items: center;
+    
 }
 
 form label {
@@ -135,4 +147,14 @@ form span {
     padding-top: 5px;
     color: #222
     
+}
+.line{
+    color:white
+}
+/***Review Page ***/
+.text-center{
+    padding-top: 6rem;
+    
+    
+
 }
