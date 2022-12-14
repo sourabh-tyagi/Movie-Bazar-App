@@ -31,7 +31,7 @@ export default function HomePage() {
             <table class="table">
   <thead>
     <tr>
-      <th scope="col">S.No.</th>
+    
       <th scope="col">Movie Name <i class="bi bi-film"></i></th>
       <th scope="col">Release Year <InfoIcon size={20} /></th>
       <th scope="col">Available On <i class="bi bi-collection-play-fill"></i></th>
@@ -45,7 +45,6 @@ export default function HomePage() {
             return(
 
     <tr>
-      <th scope="row">{res.movie_id}</th>
 
       <Link to={temp}><td>{res.title}</td></Link>
       <td>{res.yearOfRelease}</td>
