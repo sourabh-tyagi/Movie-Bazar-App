@@ -69,9 +69,9 @@ export default function SignUpPage() {
                     <input type="checkbox" name="checkbox" id="checkbox" required /> <span>I agree all statements in <a href="/login" target="_blank" rel="noopener noreferrer">terms of service</a></span>.
                 </p>
                 <p>
-                    <button id="sub_btn" onClick={() => shoot("Goal!")} type="submit">Register <CheckCircleIcon size={20}</button>
+                    <button id="sub_btn" onClick={() => shoot("Goal!")} type="submit">Register <CheckCircleIcon size={20} /></button>
                 </p>
-                <p><Link to="/"><button type="button" class="btn btn-info">Back to Sign in <i class="bi bi-arrow-left"></button></Link>.</p>
+                <p><Link to="/"><button type="button" class="btn btn-info">Back to Sign in <i class="bi bi-arrow-left"></i></button></Link>.</p>
             </form>
             {/* <footer>
                 
