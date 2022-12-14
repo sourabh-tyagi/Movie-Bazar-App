@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
-
+import { CheckIcon } from '@primer/octicons-react'
 
 import '../../App.css'
 
@@ -53,9 +53,9 @@ export default function ResetPasswordPage() {
                     <input type="password" id="password" name="password" required />
                 </p>
                 <p>
-                    <button id="sub_btn" onClick={() => shoot("Goal!")}>Update Password</button>
+                    <button id="sub_btn" onClick={() => shoot("Goal!")}>Update Password <CheckIcon size={24}</button>
                 </p>
-                <p><Link to="/"><button type="button" class="btn btn-info">Back to Sign in</button></Link>.</p>
+                <p><Link to="/"><button type="button" class="btn btn-info">Back to Sign in <i class="bi bi-arrow-left"></button></Link>.</p>
             </form>
             <footer>
             </footer>
