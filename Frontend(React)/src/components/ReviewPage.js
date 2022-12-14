@@ -4,7 +4,7 @@ import './pages/ReviewPage.css'
 import axios from 'axios';
 import { useState } from 'react';
 import { HomeIcon, FeedHeartIcon, CheckCircleFillIcon} from '@primer/octicons-react';
-import { VerifiedIcon, PeopleIcon, PencilIcon, FeedStarIcon } from '@primer/octicons-react';
+import { VerifiedIcon, PencilIcon, FeedStarIcon } from '@primer/octicons-react';
 import BackgroundImage from '../assets/images/mo1.jpg'
 
 function ReviewPage() {
@@ -115,8 +115,8 @@ let tem = '/home?email=' +email;
   <table className="table table-hover border-success table-info table-striped">
   <thead className='table-dark'>
     <tr>
-      <th scope="col">User Id <PeopleIcon size={22} /></th>
-      <th scope="col">Review <VerifiedIcon size={20} /></th>
+   
+      <th scope="col"> Other Users Review <VerifiedIcon size={20} /></th>
     </tr>
   </thead>
   <tbody className='table-group-divider'>
@@ -126,7 +126,7 @@ let tem = '/home?email=' +email;
             return(
 
     <tr>
-      <th scope="row">{res.user_id}</th>
+   
       <td>{res.review}</td>
     </tr>
 
