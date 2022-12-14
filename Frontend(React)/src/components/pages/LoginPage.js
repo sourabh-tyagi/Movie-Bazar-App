@@ -57,7 +57,7 @@ export default function SignInPage() {
                     <input type="password" id="password" name="password" required />
                 </p>
                 <p>
-                    <button id="sub_btn" onClick={() => shoot("Goal!")}>Login <SignInIcon size={20}</button>
+                    <button id="sub_btn" onClick={() => shoot("Goal!")}>Login <SignInIcon size={20} /></button>
                 </p>
                 <p>New User? <br></br><Link to="/register"><button type="button" class="btn btn-primary">Create an account <i class="bi bi-person-plus-fill"></i></button></Link></p>
             </form>
