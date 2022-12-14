@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 import { CheckIcon } from '@primer/octicons-react'
+import BackgroundImage from '../../assets/images/c.jpg'
+
 
 import '../../App.css'
 
@@ -40,6 +42,8 @@ export default function ResetPasswordPage() {
 
 
     return (
+        <header style={ HeaderStyle }>
+
         <div className="text-center m-5-auto">
             <h2>Reset your password</h2>
             <h5>Enter your email address and a new password</h5>
@@ -60,5 +64,14 @@ export default function ResetPasswordPage() {
             <footer>
             </footer>
         </div>
+       </header>
     )
+}
+const HeaderStyle = {
+    width: "100%",
+    height: "102vh",
+    background: `url(${BackgroundImage})`,
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
 }
