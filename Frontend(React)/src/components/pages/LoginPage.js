@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
-
+import { SignInIcon } from '@primer/octicons-react'
 import '../../App.css'
 
 export default function SignInPage() {
@@ -55,9 +55,9 @@ export default function SignInPage() {
                     <input type="password" id="password" name="password" required />
                 </p>
                 <p>
-                    <button id="sub_btn" onClick={() => shoot("Goal!")}>Login</button>
+                    <button id="sub_btn" onClick={() => shoot("Goal!")}>Login <SignInIcon size={20}</button>
                 </p>
-                <p>New User? <br></br><Link to="/register"><button type="button" class="btn btn-primary">Create an account</button></Link></p>
+                <p>New User? <br></br><Link to="/register"><button type="button" class="btn btn-primary">Create an account <i class="bi bi-person-plus-fill"></i></button></Link></p>
             </form>
             <footer>
             </footer>
