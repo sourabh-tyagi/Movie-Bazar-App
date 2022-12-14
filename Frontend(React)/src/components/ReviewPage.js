@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import './pages/ReviewPage.css'
 import axios from 'axios';
 import { useState } from 'react';
+import { HomeIcon, FeedHeartIcon, CheckCircleFillIcon} from '@primer/octicons-react';
+import { VerifiedIcon, PeopleIcon, PencilIcon, FeedStarIcon } from '@primer/octicons-react';
  
 
 function ReviewPage() {
@@ -73,7 +75,7 @@ let tem = '/home?email=' +email;
   return (
     <>
 
-  <div><h1 class="text-center" alt="Simple">Rate this movie</h1></div>
+  <div><h1 class="text-center" alt="Simple">Rate this movie <FeedStarIcon size={47} /></h1></div>
  
 <div class="container">
         <div class="starrating risingstar d-flex justify-content-center flex-row-reverse">
@@ -86,17 +88,17 @@ let tem = '/home?email=' +email;
   </div>
 
   <form id="feedback" onSubmit={fnHandleSubmit} data-toggle="validator" >
-<h2 class="text-center" id="fh2">WE APPRECIATE YOUR REVIEW TOO!</h2>
+<h2 class="text-center" id="fh2">WE APPRECIATE <FeedHeartIcon size={40} /> YOUR REVIEW TOO!</h2>
 
- <div class="pinfo">Write your feedback.</div>
+ <div class="pinfo">Write your feedback <PencilIcon size={22} /></div>
   
 
 <div class="form-group">
   <textarea class="form-control" rows="5" id="comment" required></textarea>
 </div>
 
- <button onClick={rev} type="submit" className="btn btn-success">Submit</button>
- <Link to={tem}><button type='submit' className='btn btn-primary'>Back to Home Page</button></Link>
+ <button onClick={rev} type="submit" className="btn btn-success">Submit <CheckCircleFillIcon size={20} /></button>
+ <Link to={tem}><button type='submit' className='btn btn-primary'>Back to Home Page <HomeIcon size={20} /></button></Link>
  
  
 </form>
@@ -107,8 +109,8 @@ let tem = '/home?email=' +email;
   <table className="table table-hover border-success table-info table-striped">
   <thead className='table-dark'>
     <tr>
-      <th scope="col">User Id</th>
-      <th scope="col">Review</th>
+      <th scope="col">User Id <PeopleIcon size={22} /></th>
+      <th scope="col">Review <VerifiedIcon size={20} /></th>
     </tr>
   </thead>
   <tbody className='table-group-divider'>
