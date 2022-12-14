@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import { SignOutIcon, InfoIcon } from '@primer/octicons-react';
-
+import BackgroundImage from '../../assets/images/mo1.jpg'
 
 
 export default function HomePage() {
@@ -22,11 +22,12 @@ export default function HomePage() {
     datafetch()
     return (
       
+        <header style={ HeaderStyle }>
         <div className="text-center">
             <h1 className="main-title home-page-title">welcome {email} <i class="bi bi-person-check"></i></h1>
-            <h3>Here are the list of movies you can review <i class="bi bi-emoji-laughing"></i></h3>
+            <h3 className="line">Here are the list of movies you can review <i class="bi bi-emoji-laughing"></i></h3>
 
-
+            <form className="hi">
             <table class="table">
   <thead>
     <tr>
@@ -57,10 +58,20 @@ export default function HomePage() {
     }
   </tbody>
 </table>
+</form>
 
             <Link to="/">
                 <button className="primary-button">Log out <SignOutIcon size={24} /></button>
             </Link>
         </div>
+      </header>
     )
+}
+const HeaderStyle = {
+  width: "100%",
+  height: "51vh",
+  background: `url(${BackgroundImage})`,
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover"
 }
