@@ -7,7 +7,8 @@
 }
 
 body {
-    margin: 0 auto
+    margin: 0 auto;
+    background-color:cadetblue;
     
 }
 
@@ -43,7 +44,7 @@ body {
 }
 
 .main-title {
-    padding-top: 5rem;
+    padding-top: 14rem;
     font-size: 5rem;
     /* font-family: 'Fascinate', cursive; */
     text-transform:capitalize
@@ -145,7 +146,7 @@ form span {
 /***    Home Page     ***/
 .home-page-title {
     padding-top: 5px;
-    color: #222
+    color: white
     
 }
 .line{
