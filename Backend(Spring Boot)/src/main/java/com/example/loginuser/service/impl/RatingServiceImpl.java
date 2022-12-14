@@ -81,17 +81,7 @@ public class RatingServiceImpl implements RatingService {
 	public Page<ReviewDto> getAllReviews(Pageable pageable, int movie_id) {
 		// TODO Auto-generated method stub
 		
-//		 try{
-//			 if(ratingRepository.findMovieId(movie_id)==null) { 
-//
-//			 System.out.println("Enter Valid movieId "+movie_id);
-//			 return null;
-//
-//			 }
-//
-//		 }catch (Exception e) {
-//			 
-//		 }
+
 				 Page<Rating>  result = ratingRepository.getAllReviews(pageable, movie_id);
 				 Page<ReviewDto> page = result.map(x -> new ReviewDto(x));
 				 return page;
