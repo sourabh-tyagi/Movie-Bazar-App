@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 import '../../App.css'
 import axios from 'axios'
+import { CheckCircleIcon } from '@primer/octicons-react'
+
 export default function SignUpPage() {
 
 
@@ -65,9 +67,9 @@ export default function SignUpPage() {
                     <input type="checkbox" name="checkbox" id="checkbox" required /> <span>I agree all statements in <a href="/login" target="_blank" rel="noopener noreferrer">terms of service</a></span>.
                 </p>
                 <p>
-                    <button id="sub_btn" onClick={() => shoot("Goal!")} type="submit">Register</button>
+                    <button id="sub_btn" onClick={() => shoot("Goal!")} type="submit">Register <CheckCircleIcon size={20}</button>
                 </p>
-                <p><Link to="/"><button type="button" class="btn btn-info">Back to Sign in</button></Link>.</p>
+                <p><Link to="/"><button type="button" class="btn btn-info">Back to Sign in <i class="bi bi-arrow-left"></button></Link>.</p>
             </form>
             {/* <footer>
                 
