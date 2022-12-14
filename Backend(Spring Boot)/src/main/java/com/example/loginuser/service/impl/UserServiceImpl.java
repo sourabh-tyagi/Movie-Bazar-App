@@ -2,7 +2,6 @@ package com.example.loginuser.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import com.example.loginuser.dto.UserDto;
 import com.example.loginuser.entity.User;
 import com.example.loginuser.repository.UserRepository;
@@ -14,9 +13,6 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	UserRepository userRepository;
 	
-//	@Autowired
-//    private BCryptPasswordEncoder bCryptPasswordEncoder;
-//		new BCryptPasswordEncoder().encode(
 
 	@Override
 	public boolean ValidateUserLogin(UserDto userDto) {
