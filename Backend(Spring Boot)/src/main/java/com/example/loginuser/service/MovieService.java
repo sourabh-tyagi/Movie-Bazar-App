@@ -9,7 +9,6 @@ public interface MovieService {
 
 	public Page<MovieDto> findAll(Pageable pageable);
 
-//	public boolean addMovie(MovieDto movieDto);
 	
 
 
