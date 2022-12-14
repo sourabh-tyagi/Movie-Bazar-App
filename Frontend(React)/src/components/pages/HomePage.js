@@ -32,7 +32,7 @@ export default function HomePage() {
   <thead>
     <tr>
       <th scope="col">S.No.</th>
-      <th scope="col">Movie Name <i class="bi bi-film"></th>
+      <th scope="col">Movie Name <i class="bi bi-film"></i></th>
       <th scope="col">Release Year <InfoIcon size={20} /></th>
       <th scope="col">Available On <i class="bi bi-collection-play-fill"></i></th>
       <th scope='col'>Rating(out of 5) <i class="bi bi-star-half"></i></th>
