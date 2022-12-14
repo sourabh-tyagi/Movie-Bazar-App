@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 import '../../App.css'
 import axios from 'axios'
 import { CheckCircleIcon } from '@primer/octicons-react'
+import BackgroundImage from '../../assets/images/c.jpg'
 
 export default function SignUpPage() {
 
@@ -43,6 +44,7 @@ export default function SignUpPage() {
         
     }
     return (
+        <header style={ HeaderStyle }>
         <div className="text-center m-5-auto">
             <h2>Join us</h2>
             <h5>Create your personal account</h5>
@@ -75,6 +77,15 @@ export default function SignUpPage() {
                 
             </footer> */}
         </div>
+       </header>
     )
 
+}
+const HeaderStyle = {
+    width: "100%",
+    height: "118vh",
+    background: `url(${BackgroundImage})`,
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
 }
