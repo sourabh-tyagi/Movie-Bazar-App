@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
-
+import { SignOutIcon, InfoIcon } from '@primer/octicons-react';
 
 
 
@@ -23,18 +23,18 @@ export default function HomePage() {
     return (
       
         <div className="text-center">
-            <h1 className="main-title home-page-title">welcome {email}</h1>
-            <h3>Here are the list of movies you can review</h3>
+            <h1 className="main-title home-page-title">welcome {email} <i class="bi bi-person-check"></i></h1>
+            <h3>Here are the list of movies you can review <i class="bi bi-emoji-laughing"></i></h3>
 
 
             <table class="table">
   <thead>
     <tr>
       <th scope="col">S.No.</th>
-      <th scope="col">Movie Name</th>
-      <th scope="col">Release Year</th>
-      <th scope="col">Available On</th>
-      <th scope='col'>Rating(out of 5)</th>
+      <th scope="col">Movie Name <i class="bi bi-film"></th>
+      <th scope="col">Release Year <InfoIcon size={20} /></th>
+      <th scope="col">Available On <i class="bi bi-collection-play-fill"></i></th>
+      <th scope='col'>Rating(out of 5) <i class="bi bi-star-half"></i></th>
     </tr>
   </thead>
   <tbody>
@@ -59,7 +59,7 @@ export default function HomePage() {
 </table>
 
             <Link to="/">
-                <button className="primary-button">Log out</button>
+                <button className="primary-button">Log out <SignOutIcon size={24} /></button>
             </Link>
         </div>
     )
