@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { HomeIcon, FeedHeartIcon, CheckCircleFillIcon} from '@primer/octicons-react';
 import { VerifiedIcon, PeopleIcon, PencilIcon, FeedStarIcon } from '@primer/octicons-react';
- 
+import BackgroundImage from '../assets/images/mo1.jpg'
 
 function ReviewPage() {
 
@@ -74,7 +74,7 @@ let tem = '/home?email=' +email;
 
   return (
     <>
-
+    <header style={ HeaderStyle }>
   <div><h1 class="text-center" alt="Simple">Rate this movie <FeedStarIcon size={47} /></h1></div>
  
 <div class="container">
@@ -132,11 +132,18 @@ let tem = '/home?email=' +email;
 </table>
   
         </div>
-    
+    </header>
 
 </>
   
   )
 }
-
+const HeaderStyle = {
+  width: "100%",
+  height: "59vh",
+  background: `url(${BackgroundImage})`,
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover"
+}
 export default ReviewPage
