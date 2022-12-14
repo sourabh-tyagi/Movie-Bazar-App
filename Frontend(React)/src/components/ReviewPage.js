@@ -31,6 +31,8 @@ const fnHandleSubmit = event => {
   event.preventDefault();
 }
 function rev(){
+  var feedback = document.getElementById('comment').value;
+  if (feedback !== "") {
   console.log("clicked")
   displayRadioValue();
 
@@ -51,6 +53,10 @@ function rev(){
   alert(" Review and Rating submitted Succesfully");
   return;
 }} );
+  }
+    else {
+      alert("Please Enter Feedback!!");
+    }
 }
 
 let tem = '/home?email=' +email;
@@ -94,7 +100,7 @@ let tem = '/home?email=' +email;
   
 
 <div class="form-group">
-  <textarea class="form-control" rows="5" id="comment" required></textarea>
+  <textarea class="form-control" rows="5" id="comment"></textarea>
 </div>
 
  <button onClick={rev} type="submit" className="btn btn-success">Submit <CheckCircleFillIcon size={20} /></button>
